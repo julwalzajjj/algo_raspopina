@@ -1,5 +1,3 @@
-import numpy as np
-
 a = [int(x) for x in input().split()]
 
 def insert_sort(a_in):
@@ -11,7 +9,6 @@ def insert_sort(a_in):
             if a[i] < a[:i][j]:
                 insert_idx = j
                 break
-
         if insert_idx == len(a) + 1:
             insert_idx = i
         else:

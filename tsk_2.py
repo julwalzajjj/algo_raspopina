@@ -10,10 +10,7 @@ def choose_sort(a):
                 local_min = a[j]
                 local_min_idx = j
 
-        tmp = a[local_min_idx]
-        a[local_min_idx] = a[i]
-        a[i] = tmp 
-    
+        a[local_min_idx], a[i] = a[i], a[local_min_idx]
     return a
 
 print(choose_sort(a))

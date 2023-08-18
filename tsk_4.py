@@ -10,10 +10,12 @@ tree_in = {
     9: [None, None]
 }
 
-def show_tree_right(node, tree=tree_in):
+
+def show_tree_right(node, time=None, tree=tree_in):
     if node is None:
         return 
-    print(node)
+    if time is None:
+        print(node)
 
     show_tree_right(tree[node][1])
 
@@ -26,7 +28,7 @@ def show_tree_left(node, tree=tree_in):
 
 def show_tree(key):
     show_tree_left(key)
-    show_tree_right(key)
+    show_tree_right(key, time=1)
 
 show_tree(1)
 
